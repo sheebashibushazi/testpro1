@@ -1,21 +1,10 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
+node{
+stage('scm checkout')
+{
+git 'https://github.com/sheebashibushazi/testpro1.git'
+}
+stage('compaile and package')
+{
+sh 'mvn package'
+}
 }
