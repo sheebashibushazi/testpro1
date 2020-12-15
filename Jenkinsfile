@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                git url: 'https://github.com/sheebashibushazi/testpro1.git'
+
              sh 'mvn clean install' 
 
             }
