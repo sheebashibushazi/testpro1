@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                git 'https://github.com/sheebashibushazi/testpro1.git'
-                sh 'mvn package'
+             sh 'mvn clean install' 
 
             }
         }
