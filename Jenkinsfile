@@ -1,13 +1,15 @@
 pipeline {
     agent any
+  tools {
+    maven 'MAVEN_HOME'
+  }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                git url: 'https://github.com/sheebashibushazi/testpro1.git'
+               
+        sh 'mvn -B -DskipTests clean package'
 
-             sh 'mvn clean install' 
 
             }
         }
