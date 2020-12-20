@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               
+             git 'https://github.com/sheebashibushazi/testpro1.git'  
         sh 'mvn -B -DskipTests clean package'
 
 
